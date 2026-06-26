@@ -2,7 +2,7 @@ services:
   - type: web
     name: h1b-checker-api
     runtime: docker
-    dockerfilePath: backend/Dockerfile
+    dockerfilePath: ./Dockerfile
     region: ohio
     plan: free
     envVars:
