@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://h1b-checker-api.onrender.com/api/:path*"
+    }
+  ]
+}

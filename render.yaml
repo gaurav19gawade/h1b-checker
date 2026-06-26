@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: h1b-checker-api
+    runtime: java
+    region: ohio
+    plan: free
+    rootDir: backend
+    buildCommand: mvn clean package -DskipTests
+    startCommand: java -jar target/h1b-checker-1.0.0.jar
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false           # set manually in Render dashboard
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false           # set to your Vercel URL after deploy
+      - key: PORT
+        value: 8080
